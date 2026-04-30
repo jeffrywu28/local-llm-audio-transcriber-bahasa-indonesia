@@ -126,13 +126,6 @@ This project was developed and tested on a **GEEKOM A6 Mini PC** — a compact, 
 | **OS** | Windows 11 |
 | **Form Factor** | Ultra-compact mini PC |
 
-### Why This Hardware?
-
-- **64 GB RAM** — Comfortably fits both Whisper (~1.6 GB) and Qwen3.5 (~5 GB) simultaneously with plenty of headroom
-- **DDR5-4800** — High memory bandwidth (76.8 GB/s) is critical for CPU-based LLM inference, where speed is bottlenecked by memory throughput
-- **8-core Zen 3+** — Efficient multi-threaded processing for both Whisper and LLM workloads
-- **Mini PC form factor** — Sits quietly on a desk, perfect for an always-available office transcription station
-
 ---
 
 ## 🚀 Getting Started
@@ -210,7 +203,7 @@ cd rangkumin
 pip install streamlit faster-whisper ollama pydub
 ```
 
-### Step 8: Run Rangkumin
+### Step 7: Run Rangkumin
 
 ```bash
 streamlit run audio.py
@@ -271,7 +264,7 @@ CPU_THREADS = 12                       # CPU threads (adjust to your hardware)
 
 - **CPU-only inference** — No GPU acceleration (Radeon 680M iGPU lacks ROCm support). An NVIDIA GPU would significantly improve speed.
 - **Whisper language** — Hardcoded to `language="id"` (Indonesian). Change this parameter for other languages.
-- **Long audio** — Files over 2 hours may require significant processing time (~60–90 min).
+- **Long audio** — Files over 2 hours may require significant processing time (>6 hour) But supported.
 - **Qwen3.5 incompatibility** — Qwen3.5 thinking mode cannot be disabled via Ollama, causing severe slowdowns. Stick with Qwen3.
 
 ---
