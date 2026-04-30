@@ -14,7 +14,7 @@ os.environ["OMP_NUM_THREADS"] = "12"
 warnings.filterwarnings("ignore", category=UserWarning, module="huggingface_hub")
 TEMPORARY_FILE = "temp.wav"
 WHISPER_MODEL_SIZE = "large-v3-turbo"
-OLLAMA_MODEL = "qwen3:8b"
+OLLAMA_MODEL = "qwen3.5:9b-q8_0"
 CPU_THREADS = 12
 
 
